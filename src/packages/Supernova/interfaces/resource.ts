@@ -1,5 +1,5 @@
 export interface ResourceInitInterface {
-    params: { params: string };
+    params: { params?: string };
 }
 
 export interface ResourceInfoInterface {
