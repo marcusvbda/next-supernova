@@ -3,13 +3,15 @@ export interface ResourceInitInterface {
 }
 
 export interface ResourceInfoInterface {
-    label?: string;
+    labels: () => string[];
 }
 
 export interface SupernovaInterface {
     init: ({ params }: ResourceInitInterface) => JSX.Element;
+    apiGetRoutes: (req: any, params: any) => any;
+    apiDeleteRoutes: (req: any, params: any) => any;
+    apiPostRoutes: (req: any, params: any) => any;
     makeResourceList: (resourceName: string) => JSX.Element;
     resourceList: (resource: ResourceInfoInterface) => JSX.Element;
-    slugToCamelCase: (slug: string) => string;
     resource: (info: ResourceInfoInterface) => ResourceInfoInterface;
 }

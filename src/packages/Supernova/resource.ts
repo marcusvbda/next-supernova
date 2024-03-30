@@ -1,3 +1,3 @@
 export const resource = {
-    label: 'Resource label'
+    labels: () => ['Resource label', 'Resource labels']
 };
