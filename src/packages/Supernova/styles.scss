@@ -1,0 +1,26 @@
+section#resource-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+
+    h1.resource-title {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+
+    .flex-row {
+        padding: 0 30px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    hr {
+        margin-bottom: 15px;
+    }
+
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+    }
+}

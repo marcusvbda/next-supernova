@@ -1,11 +1,10 @@
 import { Inter } from 'next/font/google';
-import './globals.scss';
 import { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: process.env.NEXT_PUBLIC_APP_NAME
+    title: 'Loading...'
 };
 
 export default function RootLayout({
@@ -16,6 +15,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body suppressHydrationWarning={true} className={inter.className}>
+                <nav>Menu here</nav>
                 {children}
             </body>
         </html>

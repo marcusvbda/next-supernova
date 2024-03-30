@@ -7,6 +7,7 @@ import {
 import { resource } from './resource';
 import ResourceList from './components/ResourceList';
 import { Helpers } from './Helpers';
+import HeaderTitle from './components/HeaderTitle';
 
 const Supernova: SupernovaInterface = {
     resource: (info: ResourceInfoInterface) => {
@@ -51,7 +52,14 @@ const Supernova: SupernovaInterface = {
         }
     },
     resourceList: (resource: ResourceInfoInterface): JSX.Element => {
-        return <ResourceList resource={resource} />;
+        const [singularLabel, pluralLabel] = resource.labels();
+
+        return (
+            <>
+                <HeaderTitle title={pluralLabel} />
+                <ResourceList resource={resource} />
+            </>
+        );
     }
 };
 
